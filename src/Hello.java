@@ -12,7 +12,7 @@ public class Hello {
         System.out.println(operandLeft + operandRight);
 
 */
-        if (args.length == 0) {
+     /*   if (args.length == 0) {
             System.out.println("Te rog introdu un an între 1900 și 2016 ca argument la linia de comandă.");
             return;
         }
@@ -36,7 +36,20 @@ public class Hello {
     // Metodă care verifică dacă un an este bisect
     public static boolean AnBisect(int an) {
         // Anul este bisect dacă este divizibil cu 4 și nu cu 100, sau este divizibil cu 400
-        return (an % 4 == 0 && an % 100 != 0) || (an % 400 == 0);
+        return (an % 4 == 0 && an % 100 != 0) || (an % 400 == 0); */
+
+        for(int i=2; i<=1000000; i++){
+            boolean isPrime=true;
+            for(int j=2; j<= i/2; j++){
+                if(i%j==0){
+                    isPrime=false;
+                    break;
+                }
+            }
+            if(isPrime){
+                System.out.println("Number " + i + " is prime");
+            }
+        }
     }
 }
 
