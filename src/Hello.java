@@ -13,18 +13,18 @@ public class Hello {
 
 */
      /*   if (args.length == 0) {
-            System.out.println("Te rog introdu un an între 1900 și 2016 ca argument la linia de comandă.");
+            System.out.println(" Introdu un an între 1900 și 2016 ca argument la linia de comandă.");
             return;
         }
 
-        // Convertim argumentul din string în număr întreg (anul)
+        // convertire argumentul din string în număr întreg (anul)
         int an = Integer.parseInt(args[0]);
 
-        // Verificăm dacă anul este în intervalul 1900-2016
+        // verificare dacă anul este în intervalul 1900-2016
         if (an < 1900 || an > 2016) {
             System.out.println("Anul trebuie să fie între 1900 și 2016.");
         } else {
-            // Folosim o metodă pentru a verifica dacă anul este bisect
+            //  metodă pentru a verifica dacă anul este bisect
             if (AnBisect(an)) {
                 System.out.println("Februarie are 29 zile în anul " + an);
             } else {
@@ -33,9 +33,8 @@ public class Hello {
         }
     }
 
-    // Metodă care verifică dacă un an este bisect
+    //
     public static boolean AnBisect(int an) {
-        // Anul este bisect dacă este divizibil cu 4 și nu cu 100, sau este divizibil cu 400
         return (an % 4 == 0 && an % 100 != 0) || (an % 400 == 0); */
 
         for(int i=2; i<=1000000; i++){
