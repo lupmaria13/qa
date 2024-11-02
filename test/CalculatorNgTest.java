@@ -109,6 +109,20 @@ public class CalculatorNgTest {
         mytest.pass("test finished");
     }
 
+    @Test(testName = "DivisionWithOne", groups = {"division", "calculator"})
+    public void testDivisionWithOne(Method method) {
+        ExtentTest mytest = extent.createTest(method.getName());
+        Assert.assertEquals(15, c.compute(15, 1, "/"), "Division by one failed");
+        mytest.pass("test finished");
+    }
+
+    @Test(testName = "MultiplicationWithZero", groups = {"multiplication", "calculator"})
+    public void testMultiplicationWithZero(Method method) {
+        ExtentTest mytest = extent.createTest(method.getName());
+        Assert.assertEquals(0, c.compute(15, 0, "*"), "Multiplication with zero failed");
+        mytest.pass("test finished");
+    }
+
     private void cleanUpGeneric(){
         extent.flush();
     }

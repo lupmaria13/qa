@@ -60,6 +60,28 @@ public void testSquareRoot02(){
         Assertions.assertEquals(Math.sqrt(2), c.compute(2, 0, "SQRT"), "Square root failed");
 }
 
+@Test
+public void testMultiplicationWithZero() {
+    Assertions.assertEquals(0, c.compute(7, 0, "*"), "Multiplication with zero failed");
+}
+
+    @Test
+    public void testMultiplicationWithOne() {
+        Assertions.assertEquals(7, c.compute(7, 1, "*"), "Multiplication with one failed");
+    }
+
+    @Test
+    public void testSquareRootOfNegative() {
+        IllegalArgumentException ex = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            c.compute(-64, 0, "SQRT");
+        }, "Operator not value");
+    }
+
+    @Test
+    public void testDivisionWithOne() {
+        Assertions.assertEquals(7, c.compute(7, 1, "/"), "Division by one failed");
+    }
+
 @AfterEach
     public void cleanTest(){
     System.out.println("Cleanup after the test: ");
