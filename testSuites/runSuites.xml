@@ -7,7 +7,9 @@
         <parameter name="d2" value="50"/>
         <parameter name="op" value="+"/>
         <parameter name="errMess" value="Addition failed"/>
-
+        <classes>
+            <class name="Others.CalculatorNgTest" />
+        </classes>
     </test>
 
 </suite>
