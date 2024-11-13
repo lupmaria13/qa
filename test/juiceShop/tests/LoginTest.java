@@ -20,7 +20,7 @@ import juiceShop.pages.LoginPagePF;
 //        WebElement pageText = driver.findElement(By.cssSelector(Selectors.ALL_PRODUCTS_SELECTOR));
 //        Assert.assertEquals(pageText.getText(), "All Products");
 //    }
-    public class LoginTests extends BaseTest{
+    public class LoginTest extends BaseTest{
 
         @Test
         public void login01(){
