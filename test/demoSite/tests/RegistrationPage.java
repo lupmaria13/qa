@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 public class RegistrationPage {
     private WebDriver driver;
 
-    private By usernameField = By.cssSelector("input[placeholder='Username']"); // Selector pentru Username
-    private By emailField = By.cssSelector("input[placeholder='Email']"); // Selector pentru Email
-    private By passwordField = By.cssSelector("input[placeholder='Password']"); // Selector pentru Password
-    private By registerButton = By.cssSelector("button[type='submit']"); // Selector pentru butonul Register
+    private By usernameField = By.cssSelector("input[placeholder='Username']");
+    private By emailField = By.cssSelector("input[placeholder='Email']");
+    private By passwordField = By.cssSelector("input[placeholder='Password']");
+    private By registerButton = By.cssSelector("button[type='submit']");
 
     public RegistrationPage(WebDriver driver) {
         this.driver = driver;

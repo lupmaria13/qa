@@ -15,7 +15,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("zebra", "zebrapassword");
 
-        WebElement profileElement = Utils.waitForElement(driver, 10, By.id("profile-icon")); // Înlocuiește "profile-icon" cu ID-ul corect
+        WebElement profileElement = Utils.waitForElement(driver, 10, By.id("profile-icon"));
         Assert.assertTrue(profileElement.isDisplayed(), "Elementul de profil ar trebui să fie afișat după login.");
     }
 
@@ -26,7 +26,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("invalidUser", "wrongPassword");
 
-        WebElement errorMessage = Utils.waitForElement(driver, 10, By.id("login-error")); // Înlocuiește "login-error" cu ID-ul corect
+        WebElement errorMessage = Utils.waitForElement(driver, 10, By.id("login-error"));
         Assert.assertTrue(errorMessage.isDisplayed(), "Mesajul de eroare ar trebui să fie afișat pentru credențiale incorecte.");
     }
 }

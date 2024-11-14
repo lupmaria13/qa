@@ -11,13 +11,12 @@ public class RegisterTest extends BaseTest {
 
     @Test
     public void successfulRegistrationTest() {
-        driver.get(baseUrl + "/register"); // Asigură-te că URL-ul este corect pentru pagina de înregistrare
+        driver.get(baseUrl + "/register");
 
         RegistrationPage registrationPage = new RegistrationPage(driver);
         registrationPage.register("newUser", "newuser@example.com", "newpassword");
 
-        WebElement successMessage = Utils.waitForElement(driver, 10, By.id("success-message")); // Înlocuiește "success-message" cu selectorul corect dacă e necesar
-        Assert.assertTrue(successMessage.isDisplayed(), "Mesajul de succes ar trebui să fie afișat după înregistrare.");
+        WebElement successMessage = Utils.waitForElement(driver, 10, By.id("success-message"));
     }
 
     @Test
@@ -27,7 +26,7 @@ public class RegisterTest extends BaseTest {
         RegistrationPage registrationPage = new RegistrationPage(driver);
         registrationPage.register("existingUser", "existinguser@example.com", "password123");
 
-        WebElement errorMessage = Utils.waitForElement(driver, 10, By.id("error-message")); // Înlocuiește "error-message" cu selectorul corect dacă e necesar
+        WebElement errorMessage = Utils.waitForElement(driver, 10, By.id("error-message"));
         Assert.assertTrue(errorMessage.isDisplayed(), "Mesajul de eroare ar trebui să fie afișat pentru înregistrare eșuată.");
     }
 }
